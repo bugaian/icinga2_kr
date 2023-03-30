@@ -2,11 +2,11 @@
 
 This repository contains the source for the [icinga2](https://www.icinga.org/icinga2/) [docker](https://www.docker.com) image.
 
-The dockerhub-repository is located at [https://hub.docker.com/r/jordan/icinga2/](https://hub.docker.com/r/jordan/icinga2/).
+The dockerhub-repository is located at [https://hub.docker.com/r/bugaian/icinga2_kr/](https://hub.docker.com/r/bugaian/icinga2_kr/).
 
 This build is automated by push for the git-repo. Just crawl it via:
 
-    docker pull jordan/icinga2
+    docker pull bugaian/icinga2_kr
 
 ## Image details
 
@@ -31,7 +31,7 @@ This build is automated by push for the git-repo. Just crawl it via:
 
 Start a new container and bind to host's port 80
 
-    docker run -p 80:80 -h icinga2 -t jordan/icinga2:latest
+    docker run -p 80:80 -h icinga2 -t bugaian/icinga2_kr:latest
 
 ### docker-compose
 
@@ -64,7 +64,7 @@ If you want to save your php-sessions over multiple boots, mount `/var/lib/php/s
 
 example:
 ```
-docker run [...] -v $PWD/icingaweb2-sessions:/var/lib/php/sessions/ jordan/icinga2
+docker run [...] -v $PWD/icingaweb2-sessions:/var/lib/php/sessions/ bugaian/icinga2
 ```
 
 ## Graphite
@@ -79,7 +79,7 @@ docker run -t \
   -e ICINGA2_FEATURE_GRAPHITE=true \
   -e ICINGA2_FEATURE_GRAPHITE_HOST=graphite \
   -e ICINGA2_FEATURE_GRAPHITE_PORT=2003 \
-  jordan/icinga2:latest
+  bugaian/icinga2:latest
 ```
 
 You will need to modify the retention policy as detailed here: https://github.com/jjethwa/icinga2/issues/275#issuecomment-1046892058
